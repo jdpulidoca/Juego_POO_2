@@ -1,0 +1,34 @@
+class Grafo{
+int [] data, data2,data3,data4;
+
+Grafo(String [] stuff, String [] stuff2,String [] stuff3,String [] stuff4){
+data= int(split(stuff[0], ','));
+data2 = int(split(stuff2[0], ','));
+data3 = int(split(stuff3[0], ','));
+data4 = int(split(stuff4[0], ','));
+ }
+  void display(){
+     strokeWeight(5);
+    stroke(255, 0, 255);
+    for(int i=0;i<data3.length-1;i++){
+   line(data3[i],data4[i],data3[i+1],data4[i+1]);
+    }
+     pushStyle();
+    strokeWeight(5);
+    stroke(255, 0, 255);
+    fill(0, 255, 0);
+     for(int i=0;i<data.length;i++){
+    ellipse(data[i],data2[i],30,30);
+    }
+
+     popStyle();     
+  }
+   int []  data(){
+     return data;
+     
+   }
+   int []  data2(){
+     return data2;
+     
+   }
+}
