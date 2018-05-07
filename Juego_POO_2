@@ -1,0 +1,35 @@
+String [] stuff;
+String [] stuff2; 
+String [] stuff3;
+String [] stuff4;
+  int[] X= new int[14];
+int[] Y= new int [14];
+Grafo  grafo;
+Dibujar linea;
+int x;
+void setup(){
+ size(600,600);
+ x=0;
+stuff =  loadStrings("data/p.csv");
+stuff2 = loadStrings("data/p2.csv");
+stuff3 = loadStrings("data/L.csv");
+stuff4 = loadStrings("data/L2.csv");
+ grafo=new Grafo(stuff,stuff2,stuff3,stuff4); 
+ linea=new Dibujar(X,Y);
+
+
+}
+void draw(){
+ grafo.display(); 
+ linea.display();
+ 
+}
+void mousePressed(){
+ for(int counter=13;counter>0;counter--){
+   X[counter]=X[counter-1];
+   Y[counter]=Y[counter-1];
+   }
+ X[0]=pmouseX;
+ Y[0]=pmouseY;
+
+}
