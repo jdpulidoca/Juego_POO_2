@@ -1,0 +1,22 @@
+class Dibujar{
+  int [] x,y;
+ Dibujar(int []X, int [] Y){
+    x=X;
+    y=Y;
+ }
+  void display(){
+    strokeWeight(5);
+    stroke(50, 0, 50);
+    for(int i=0;i<x.length-1;i++){
+   line(x[i],y[i],x[i+1],y[i+1]);
+    } 
+    
+  }
+ int [] x(){
+   return x;
+ }
+ int [] y(){
+   return y;
+ }
+  
+}
